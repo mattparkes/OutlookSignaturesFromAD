@@ -53,15 +53,15 @@ End If
 Dim LogoImage, FooterImage, ExtraImage
 LogoImage =  Replace(strCompanyName & "-" & objUser.Department & "-logo.jpg", " ", "_")
 If objFSO.FileExists(strServerSignatureFolder & LogoImage) Then 
-	objFSO.CopyFile strServerSignatureFolder & LogoImage, strLocalSignatureFolder.Path
+	objFSO.CopyFile strServerSignatureFolder & LogoImage, strLocalSignatureFolder
 End If
 FooterImage = Replace(strCompanyName & "-" & objUser.Department & "-footer.jpg", " ", "_")
 If objFSO.FileExists(strServerSignatureFolder & FooterImage) Then 
-	objFSO.CopyFile strServerSignatureFolder & FooterImage, strLocalSignatureFolder.Path
+	objFSO.CopyFile strServerSignatureFolder & FooterImage, strLocalSignatureFolder
 End If
 ExtraImage = Replace(strCompanyName & "-" & objUser.Department & "-extra.jpg", " ", "_")
 If objFSO.FileExists(strServerSignatureFolder & ExtraImage) Then 
-	objFSO.CopyFile strServerSignatureFolder & ExtraImage, strLocalSignatureFolder.Path
+	objFSO.CopyFile strServerSignatureFolder & ExtraImage, strLocalSignatureFolder
 End If
 
 'Build the HTML File:
